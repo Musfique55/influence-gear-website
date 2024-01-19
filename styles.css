@@ -20,6 +20,11 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .logo {
@@ -212,6 +217,105 @@ footer p {
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.social-icons img{
+
+.social-icons img {
     cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive design starts */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 35px 16px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+    }
+
+    .banner-images {
+        width: 257px;
+        height: 257px;
+    }
+
+    .banner-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-contents {
+        text-align: center;
+    }
+
+    .banner-contents h2 {
+        font-size: 1.8rem;
+        line-height: normal;
+    }
+
+    .banner-contents p {
+        font-size: 0.9rem;
+    }
+
+    .sponsors {
+        margin: 0px 40px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 30px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .products img {
+        width: 100%;
+    }
+
+    .products h3 {
+        color: #18191F;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-top: 16px;
+    }
+
+    .price {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .details{
+        margin-bottom: 20px;
+    }
+    .see-more button{
+        margin-right: 15px;
+    }
+    .featured-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 15px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .featured-contents h3{
+        font-size: 1.5rem;
+    }
+    .featured-image img{
+        width: 100%;
+    }
+    footer{
+        margin-top: 50px;
+    }
 }
